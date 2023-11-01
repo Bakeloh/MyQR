@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="index.js"></script>
+    
 </head>
+
 <body>
     <div class="container">
         <p>Enter yur text or URL</p>
-        <input type="text" placeholder="Text or URL">
-<div id="ImgBox">
-    <img src="" id="QrImage">
+        <input type="text" placeholder="Text or URL" id="qrText">
+        <div id="ImgBox">
+            <img src="" id="QrImage">
 
-</div>
+        </div>
 
-        <button>Generate QR Code</button>
+        <button onclick="generateQR()"> Generate QR Code</button>
+        <!-- above is to call defined function 
+        function generateQR(){
+            qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrText.value;
+            
+        
+        } -->
 
     </div>
-
+    <script type="text/javascript" src="index.js"></script>
 </body>
+
 </html>

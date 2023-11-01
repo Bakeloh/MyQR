@@ -48,3 +48,22 @@ body {
     margin: 20px 0;
     font-weight: 500;
 }
+/* styling qr image box */
+#ImgBox{
+    width: 200px;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transform: max-height 1s;
+}
+/* styling image box image */
+#ImgBox img{
+    width: 100px;
+    padding: 10px;
+}
+/* employed when the qr is displayed  */
+#imgBox.show-img{
+    max-height: 300px;
+    margin: 10px auto;
+    border: 1px solid #d1d1d1;
+}
