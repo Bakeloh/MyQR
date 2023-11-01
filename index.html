@@ -6,26 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    
+
 </head>
 
 <body>
     <div class="container">
-        <p>Enter yur text or URL</p>
+        <p>Enter your text or URL</p>
         <input type="text" placeholder="Text or URL" id="qrText">
-        <div id="ImgBox">
-            <img src="" id="QrImage">
-
+        <div id="imgBox">
+            <img src="" id="qrImage">
         </div>
-
-        <button onclick="generateQR()"> Generate QR Code</button>
-        <!-- above is to call defined function 
-        function generateQR(){
-            qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrText.value;
-            
-        
-        } -->
-
+        <button onclick="generateQR()">Generate QR Code</button>
     </div>
     <script type="text/javascript" src="index.js"></script>
 </body>
