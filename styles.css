@@ -1,3 +1,14 @@
 body{
     background: #0802A3;
 }
+/* adding the container properties  (moving div in the center of the web page)*/
+.container{
+    width: 400px;
+    padding: 25px 35px;
+    position: absolute;
+    top: 50%;       
+    left: 50%;  
+    transform: translate(-50%,-50%);
+    background: #FF4B91;
+    border-radius: 10px;
+}
