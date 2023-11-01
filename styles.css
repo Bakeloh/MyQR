@@ -35,8 +35,8 @@ body {
 
 /* button  */
 .container button {
-    width: 100px;
-    height: 50px;
+    inline-size: 100px;
+    block-size: 50px;
     /* choose color later */
     background: #45FFCA;
     color: #fff;
