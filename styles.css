@@ -1,5 +1,6 @@
+/* fav color #FFE67C */
 body {
-    background: #0802A3;
+    background: #232D3F;
 }
 
 /* adding the container properties  (moving div in the center of the web page)*/
@@ -10,7 +11,7 @@ body {
     inset-block-start: 50%;
     inset-inline-start: 50%;
     transform: translate(-50%, -50%);
-    background: #FF4B91;
+    background: #CFFDE1;
     border-radius: 10px;
 }
 
@@ -19,6 +20,7 @@ body {
     font-weight: 600;
     font-size: 15px;
     margin-block-end: 8px;
+    font-family: ;
 }
 
 /* input field */
@@ -26,9 +28,9 @@ body {
     inline-size: 100%;
     block-size: 50px;
     /* edit below later */
-    border: 1px solid;
+    border: 2px solid;
     outline: 0;
-    padding: 10px;
+    padding: 5px;
     margin: 10px 0 20px;
     border-radius: 5px;
 }
@@ -51,22 +53,22 @@ body {
 
 /* styling qr image box */
 #ImgBox {
-    width: 200px;
+    inline-size: 200px;
     border-radius: 5px;
-    max-height: 0;
+    max-block-size: 0;
     overflow: hidden;
     transform: max-height 1s;
 }
 
 /* styling image box image */
 #ImgBox img {
-    width: 100px;
+    inline-size: 100px;
     padding: 10px;
 }
 
 /* employed when the qr is displayed  */
 #imgBox.show-img {
-    max-height: 300px;
+    max-block-size: 300px;
     margin: 10px auto;
     border: 1px solid #d1d1d1;
 }
@@ -80,15 +82,19 @@ body {
     0% {
         transform: translatex(0)
     }
+
     25% {
         transform: translatex(-2%)
     }
+
     50% {
         transform: translatex(0)
     }
+
     75% {
         transform: translatex(2px)
     }
+
     100% {
         transform: translatex(0)
     }
