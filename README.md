@@ -42,7 +42,8 @@ User Flow:
 
 Purpose and Use Cases:
 
-- Users can use this system to quickly create QR codes for various purposes, such as sharing links, contact information, location, meeting invite or event details.
+- Users can use this system to quickly create QR codes for various purposes, such as sharing links, contact information, location, meeting invite or event details
+  
 
 The MVP aims to provide a simple and user-friendly QR code generation tool for basic use cases, and it can serve as a foundation for further development and enhancements based on user feedback and requirements.
 
