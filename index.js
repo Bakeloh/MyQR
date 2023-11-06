@@ -7,6 +7,21 @@ function generateQR() {
     if (qrText.value.length > 0) {
         qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + encodeURIComponent(qrText.value);
         imgBox.classList.add("show-img");
+
+        /* Enabling download */
+        // downloadLink.href = qrImage.src;
+        // downloadLink.style.display = "block";
+
+        function downloadQR(){
+            let qrImage =document.getElementById("qrImage");
+
+            if (qrImage.src){
+                const newTab = window.open();
+                newTab.document.write('<img src="' + qrImage.src + '">');
+            }
+        }
+
+
         qrText.value = ""; /* clearing input field */
 
     } else {
