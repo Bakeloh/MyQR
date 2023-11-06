@@ -28,9 +28,12 @@ function generateQR() {
 function downloadQR(){
     let qrImage =document.getElementById("qrImage");
 
-    if (qrImage.src){
+    if (qrImage.src && qrImage.src !== ""){
         const newTab = window.open();
         newTab.document.write('<img src="' + qrImage.src + '">');
+    } else {
+        alert ("No QR code available for download. Generate a QR code first.")
+
     }
 }
 
