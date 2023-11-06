@@ -111,7 +111,7 @@ nav {
 }
 
 nav ul {
-    flex: 1;
+    flex: 3;
 }
 
 nav ul li {
@@ -130,14 +130,4 @@ nav .btn {
     border: 1px solid #fff;
     padding: 10px 30px;
     border-radius: 20px;
-}
-
-/* CONTENT */
-
-.content{
-    margin-top: 10%;
-}
-.content h1{
-    font-size: 20px;
-    margin-bottom: 15px;
 }

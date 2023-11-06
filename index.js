@@ -1,24 +1,28 @@
+document.addEventListener("DOMContentLoaded", function () {
+    // Get the necessary elements
+    const generateQRButton = document.getElementById("generateQRButton");
+    const downloadQRButton = document.getElementById("downloadQRButton");
+    const qrText = document.getElementById("qrText");
 
-document.addEventListener("DOMContentLoaded",function() {
-    const generateQR =documnet.getElementById("generateQRButton");
-    generateQRButton.addEventListener("click", function (){
-        generateQR();
-    })
-})
-
+    // Add event listeners
+    generateQRButton.addEventListener("click", generateQR);
+    downloadQRButton.addEventListener("click", downloadQR);
+    qrText.addEventListener("focus", clearInputField);
+});
 
 function generateQR() {
-    let qrText = document.getElementById("qrText");
-    let qrImage = document.getElementById("qrImage");
-    let imgBox = document.getElementById("imgBox");
+    const downloadLink = document.getElementById("downloadLink");
+    const qrText = document.getElementById("qrText");
+    const qrImage = document.getElementById("qrImage");
+    const imgBox = document.getElementById("imgBox");
 
     if (qrText.value.length > 0) {
         qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + encodeURIComponent(qrText.value);
         imgBox.classList.add("show-img");
 
         /* Enabling download */
-        downloadLink.href = qrImage.src;
-        downloadLink.style.display = "block";
+        // downloadLink.href = qrImage.src;
+        // downloadLink.style.display = "block";
 
         qrText.value = ""; /* clearing input field */
     } else {
@@ -29,10 +33,9 @@ function generateQR() {
     }
 }
 
-// download QR
 function downloadQR() {
-    let qrImage = document.getElementById("qrImage");
-    let error = document.getElementById("error")
+    const qrImage = document.getElementById("qrImage");
+    const error = document.getElementById("error");
 
     if (qrImage.src && qrImage.src !== "") {
         const newTab = window.open();
@@ -42,7 +45,7 @@ function downloadQR() {
     }
 }
 
-
-
-// Add autoclear textbox.
-// Add download button.
+function clearInputField() {
+    const qrText = document.getElementById("qrText");
+    qrText.value = "";
+}
