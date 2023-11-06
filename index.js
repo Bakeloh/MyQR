@@ -1,4 +1,12 @@
 
+document.addEventListener("DOMContentLoaded",function() {
+    const generateQR =documnet.getElementById("generateQRButton");
+    generateQRButton.addEventListener("click", function (){
+        generateQR();
+    })
+})
+
+
 function generateQR() {
     let qrText = document.getElementById("qrText");
     let qrImage = document.getElementById("qrImage");
@@ -22,17 +30,17 @@ function generateQR() {
 }
 
 // download QR
-// function downloadQR() {
-//     let qrImage = document.getElementById("qrImage");
-//     let error = document.getElementById("error")
+function downloadQR() {
+    let qrImage = document.getElementById("qrImage");
+    let error = document.getElementById("error")
 
-//     if (qrImage.src && qrImage.src !== "") {
-//         const newTab = window.open();
-//         newTab.document.write('<img src="' + qrImage.src + '">');
-//     } else {
-//         error.style.display = "block";
-//     }
-// }
+    if (qrImage.src && qrImage.src !== "") {
+        const newTab = window.open();
+        newTab.document.write('<img src="' + qrImage.src + '">');
+    } else {
+        error.style.display = "block";
+    }
+}
 
 
 
