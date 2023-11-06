@@ -11,7 +11,7 @@ MyQRgenerator
 
 
 
-QR Code Generator
+QR Code Generator (Using a public API)
 
 Overview:
 The MVP for the QR Code Generator system is a simple web application that allows users to create, view, and download QR codes. Users can input text, number or link generate a QR code, and then download the QR code image for various purposes. The MVP provides essential functionality while keeping the interface straightforward.
