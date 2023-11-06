@@ -12,10 +12,7 @@ function generateQR() {
         downloadLink.href = qrImage.src;
         downloadLink.style.display = "block";
 
-
-
         qrText.value = ""; /* clearing input field */
-
     } else {
         qrText.classList.add("error");
         setTimeout(() => {
@@ -24,18 +21,20 @@ function generateQR() {
     }
 }
 
+// download QR
+// function downloadQR() {
+//     let qrImage = document.getElementById("qrImage");
+//     let error = document.getElementById("error")
 
-function downloadQR(){
-    let qrImage =document.getElementById("qrImage");
+//     if (qrImage.src && qrImage.src !== "") {
+//         const newTab = window.open();
+//         newTab.document.write('<img src="' + qrImage.src + '">');
+//     } else {
+//         error.style.display = "block";
+//     }
+// }
 
-    if (qrImage.src && qrImage.src !== ""){
-        const newTab = window.open();
-        newTab.document.write('<img src="' + qrImage.src + '">');
-    } else {
-        alert ("No QR code available for download. Generate a QR code first.")
 
-    }
-}
 
 // Add autoclear textbox.
 // Add download button.
