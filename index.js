@@ -9,17 +9,9 @@ function generateQR() {
         imgBox.classList.add("show-img");
 
         /* Enabling download */
-        // downloadLink.href = qrImage.src;
-        // downloadLink.style.display = "block";
+        downloadLink.href = qrImage.src;
+        downloadLink.style.display = "block";
 
-        function downloadQR(){
-            let qrImage =document.getElementById("qrImage");
-
-            if (qrImage.src){
-                const newTab = window.open();
-                newTab.document.write('<img src="' + qrImage.src + '">');
-            }
-        }
 
 
         qrText.value = ""; /* clearing input field */
@@ -29,6 +21,16 @@ function generateQR() {
         setTimeout(() => {
             qrText.classList.remove("error");
         }, 1000);
+    }
+}
+
+
+function downloadQR(){
+    let qrImage =document.getElementById("qrImage");
+
+    if (qrImage.src){
+        const newTab = window.open();
+        newTab.document.write('<img src="' + qrImage.src + '">');
     }
 }
 
