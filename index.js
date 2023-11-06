@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Get the necessary elements
+
     const generateQRButton = document.getElementById("generateQRButton");
     const downloadQRButton = document.getElementById("downloadQRButton");
     const qrText = document.getElementById("qrText");
 
-    // Add event listeners
+
     generateQRButton.addEventListener("click", generateQR);
     downloadQRButton.addEventListener("click", downloadQR);
     qrText.addEventListener("focus", clearInputField);
